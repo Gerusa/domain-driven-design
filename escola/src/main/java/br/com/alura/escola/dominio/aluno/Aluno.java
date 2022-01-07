@@ -7,6 +7,7 @@ import java.util.List;
  * Uma entidade, tem uma identificação única.
  *
  */
+//No mundo DDD essa classe é chamada de AGGREATE(tem uma coleção de outros objetos: cpf, email, telefones) ROOT(mantém, é a raíz)
 public class Aluno {
 
 	// id não é conceito de domínio da aplicação, e sim da infra-estrutura
@@ -20,7 +21,7 @@ public class Aluno {
 	private Email email;
 
 	private List<Telefone> telefones = new ArrayList<>();
-	
+
 	private String senha;
 
 	public Aluno(CPF cpf, String nome, Email email) {
@@ -29,7 +30,13 @@ public class Aluno {
 		this.email = email;
 	}
 
+	// Invariante: uma regra de negócio que deve sempre ser verdadeira para o objeto
+	// ser válido.
+	// Caso o aluno tenha mais de 2 telefones, o mesmo estará em um estado inválido.
 	public void adicionarTelefone(String ddd, String numero) {
+		if (telefones.size() == 2) {
+			throw new IllegalArgumentException("Permitido no máximo 2 telefones!");
+		}
 		this.telefones.add(new Telefone(ddd, numero));
 
 	}

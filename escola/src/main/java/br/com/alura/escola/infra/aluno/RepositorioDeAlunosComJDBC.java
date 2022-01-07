@@ -27,6 +27,7 @@ public class RepositorioDeAlunosComJDBC implements RepositorioDeAlunos {
 	@Override
 	public void matricular(Aluno aluno) {
 		try {
+			//persistência do aggreate Aluno. Veja q insere aluno e telefone no mesmo repositório
 			String sql = "INSERT INTO ALUNO VALUES(?, ?, ?)";
 			PreparedStatement ps = connection.prepareStatement(sql);
 			ps.setString(1, aluno.getCpf());
