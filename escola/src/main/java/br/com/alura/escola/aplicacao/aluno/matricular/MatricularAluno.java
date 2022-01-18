@@ -1,6 +1,9 @@
 package br.com.alura.escola.aplicacao.aluno.matricular;
 
 import br.com.alura.escola.dominio.aluno.Aluno;
+import br.com.alura.escola.dominio.aluno.AlunoMatriculado;
+import br.com.alura.escola.dominio.aluno.CPF;
+import br.com.alura.escola.dominio.aluno.PublicadorDeEventos;
 import br.com.alura.escola.dominio.aluno.RepositorioDeAlunos;
 
 /**
@@ -16,15 +19,20 @@ import br.com.alura.escola.dominio.aluno.RepositorioDeAlunos;
 public class MatricularAluno {
 
 	private final RepositorioDeAlunos repositorio;
+	private final PublicadorDeEventos publicador;
 
-	public MatricularAluno(final RepositorioDeAlunos repositorio) {
+	public MatricularAluno(final RepositorioDeAlunos repositorio, final PublicadorDeEventos publicador) {
 		this.repositorio = repositorio;
+		this.publicador = publicador;
 	}
 
 	// COMMAND
 	public void matricular(MatricularAlunoDTO dados) {
 		Aluno novo = dados.criarAluno();
 		repositorio.matricular(novo);
+		
+		AlunoMatriculado evento = new AlunoMatriculado(new CPF(novo.getCpf()));
+		publicador.publicar(evento);
 
 	}
 
