@@ -14,3 +14,5 @@ Dessa forma, quando um dev inicia em um projeto ele consegue identificar, com fa
 	* Aggreate: classe que contém coleção de outros objetos
 	* Invariante: uma regra de negócio que deve sempre ser verdadeira para o objeto ser considerado válido
 	* Evento: permite que o código fique desacoplado, favorecendo a sua manutenção e extensão
+	* Bounded Contexts: contextos delimitados, são um dos conceitos mais complexos de entender e implementar do estudo do DDD. Neste projeto, foram criados os contextos 'academico' e 'gamificacao'.
+	
