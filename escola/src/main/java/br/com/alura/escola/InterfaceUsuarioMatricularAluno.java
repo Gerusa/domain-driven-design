@@ -1,13 +1,14 @@
-package br.com.alura.escola.academico;
+package br.com.alura.escola;
 
 import br.com.alura.escola.academico.aplicacao.aluno.matricular.MatricularAluno;
 import br.com.alura.escola.academico.aplicacao.aluno.matricular.MatricularAlunoDTO;
 import br.com.alura.escola.academico.dominio.aluno.LogDeAlunoMatriculado;
-import br.com.alura.escola.academico.dominio.aluno.PublicadorDeEventos;
 import br.com.alura.escola.academico.infra.aluno.RepositorioDeAlunosEmMemoria;
+import br.com.alura.escola.shared.dominio.evento.PublicadorDeEventos;
 
 /**
- * Simula a interface que o usuário utiliza para matricular um aluno.
+ * Simula a interface que o usuário utiliza para matricular um aluno, uma aplicação web.
+ * Ela pode ter acesso a um ou mais contextos (academico, gamificaco, shared).
  *
  */
 public class InterfaceUsuarioMatricularAluno {

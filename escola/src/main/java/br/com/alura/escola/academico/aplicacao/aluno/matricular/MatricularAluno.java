@@ -2,9 +2,9 @@ package br.com.alura.escola.academico.aplicacao.aluno.matricular;
 
 import br.com.alura.escola.academico.dominio.aluno.Aluno;
 import br.com.alura.escola.academico.dominio.aluno.AlunoMatriculado;
-import br.com.alura.escola.academico.dominio.aluno.PublicadorDeEventos;
 import br.com.alura.escola.academico.dominio.aluno.RepositorioDeAlunos;
 import br.com.alura.escola.shared.dominio.CPF;
+import br.com.alura.escola.shared.dominio.evento.PublicadorDeEventos;
 
 /**
  * Classe usando o padrão de projeto COMMAND, padrão usado para executar uma

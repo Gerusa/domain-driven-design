@@ -1,10 +1,7 @@
-package br.com.alura.escola.academico.dominio.aluno;
+package br.com.alura.escola.shared.dominio.evento;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import br.com.alura.escola.academico.dominio.Evento;
-import br.com.alura.escola.academico.dominio.Ouvinte;
 
 /**
  * Classe genérica, para publicar qualquer tipo de evento.
