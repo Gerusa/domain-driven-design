@@ -3,7 +3,7 @@
  */
 package br.com.alura.escola.gamificacao.dominio.selo;
 
-import br.com.alura.escola.academico.dominio.aluno.CPF;
+import br.com.alura.escola.shared.dominio.CPF;
 
 /**
  * É como uma 'medalha' que um aluno irá receber.

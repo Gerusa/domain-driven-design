@@ -1,4 +1,4 @@
-package br.com.alura.escola.academico.dominio.aluno;
+package br.com.alura.escola.shared.dominio;
 
 /**
  * É um value object, ou seja, não possui uma identidade única.

@@ -1,5 +1,7 @@
 package br.com.alura.escola.academico.dominio.aluno;
 
+import br.com.alura.escola.shared.dominio.CPF;
+
 /**
  * Padrão Builder, para construção do objeto Aluno.
  *
